@@ -1,0 +1,81 @@
+name: "🕷️ Bug Report"
+description: Report errors or unexpected behavior
+labels:
+  - bug
+body:
+  - type: checkboxes
+    attributes:
+      label: Self Checks
+      description: "Please confirm the following before submitting :)"
+      options:
+        - label: I have searched for [existing issues](https://github.com/langgenius/syncless-issue/issues), including closed ones.
+          required: true
+        - label: I confirm that I am using English to submit this report (中文用户也请使用英语提交).
+          required: true
+        - label: "Please do not modify this template :) and fill in all the required fields."
+          required: true
+
+  - type: input
+    attributes:
+      label: Syncless version
+      description: You can find this in the Syncless app settings or about page.
+      placeholder: e.g. 1.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Platform / Device
+      description: Which platform or device were you using?
+      multiple: true
+      options:
+        - Web (Browser)
+        - macOS Desktop App
+        - Windows Desktop App
+        - Linux Desktop App
+        - CLI
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: OS version
+      description: What operating system and version are you using?
+      placeholder: e.g. macOS 15.4, Windows 11 24H2, Ubuntu 24.04
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Provide detailed steps to reproduce the bug. Screenshots and logs are highly appreciated. Please use fenced code blocks (triple backticks) for logs.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Observe that '...'
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "✔️ Expected Behavior"
+      description: Describe what you expected to happen.
+      placeholder: What were you expecting?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "❌ Actual Behavior"
+      description: Describe what actually happened.
+      placeholder: What happened instead?
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Any other information, logs, or screenshots that might help.
+    validations:
+      required: false
